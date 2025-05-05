@@ -1,11 +1,10 @@
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef CAT_HPP
+# define CAT_HPP
 
-# include <iostream>
+# include "Animal.hpp"
 
-class Cat
+class Cat: public Cat
 {
-
 	protected:
 		std::string	_type;
 	public:

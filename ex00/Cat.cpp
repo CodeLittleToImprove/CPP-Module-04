@@ -1,5 +1,5 @@
 
-#include "Animal.hpp"
+#include "Cat.hpp"
 
 // Default constructor
 Cat::Cat()
