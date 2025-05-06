@@ -1,22 +1,29 @@
 
-#include "WrongAnimal.hpp"
+#include "Animal.hpp"
 
 // Default constructor
-WrongAnimal::WrongAnimal()
-	:_type("WrongAnimal")
+Animal::Animal()
+	:_type("Animal")
 {
 	std::cout << getClassName() << " Default constructor called" << std::endl;
 }
 
+// Parameterized Constructor
+Animal::Animal(std::string const &type)
+	:_type(type)
+{
+	std::cout << getClassName() << " Parameterized Constructor called" << std::endl;
+}
+
 // Copy constructor
-WrongAnimal::WrongAnimal(const WrongAnimal &other)
+Animal::Animal(const Animal &other)
 	:_type(other._type)
 {
 	std::cout << getClassName() << " Copy constructor called" << std::endl;
 }
 
 // Copy Assignment operator overload
-WrongAnimal &WrongAnimal::operator=(const WrongAnimal &other)
+Animal &Animal::operator=(const Animal &other)
 {
 	std::cout << getClassName() << " Copy assignment operator called" << std::endl;
 	if (this != &other)
@@ -25,23 +32,23 @@ WrongAnimal &WrongAnimal::operator=(const WrongAnimal &other)
 }
 
 // Destructor
-WrongAnimal::~WrongAnimal(void)
+Animal::~Animal(void)
 {
 	std::cout << getClassName() << " Destructor called" << std::endl;
 }
 
-void WrongAnimal::makeSound() const
+void Animal::makeSound() const
 {
-	std::cout << this->_type << " genericNoises" << std::endl;
+	std::cout <<"Angry " << this->_type << " Generic Noises" << std::endl;
 }
 
-std::string WrongAnimal::getType() const
+std::string Animal::getType() const
 {
 	return this->_type;
 }
 
-std::string WrongAnimal::getClassName() const
+std::string Animal::getClassName() const
 {
-	return "WrongAnimal";
+	return "Animal";
 }
 

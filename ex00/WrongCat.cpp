@@ -3,16 +3,9 @@
 
 // Default constructor
 WrongCat::WrongCat()
-	:_type("WrongCat")
 {
+	_type = "WrongCat";
 	std::cout << getClassName() << " Default constructor called" << std::endl;
-}
-
-// Parameterized Constructor
-WrongCat::WrongCat(std::string const &type)
-	:_type(type)
-{
-	std::cout << getClassName() << " Parameterized Constructor called" << std::endl;
 }
 
 // Copy constructor

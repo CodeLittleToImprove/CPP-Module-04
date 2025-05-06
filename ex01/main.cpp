@@ -14,49 +14,28 @@
 #include "Animal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
+#include "Brain.hpp"
 
 int main()
 {
-	const Cat* meta = new Cat();
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
+	delete j;//should not create a leak
+	delete i;
 
 	return 0;
 }
 
 // int main()
 // {
-// 	std::cout << "\n--- Proper Polymirphism ---\n" << std::endl;
-// 	const Animal *animals[3];
-// 	animals[0] = new Dog();
-// 	animals[1] = new Cat();
-// 	animals[2] = new Animal();
+// 	const Cat *cat = new Cat();
+// 	cat->setIdea(0, "Attack feet at 3 AM");
+// 	std::cout << "Cat idea 0: " << cat->getIdea(0) << std::endl;
+// 	delete cat;
 //
-// 	std::cout << "\nCalling makeSound():\n";
-// 	for (int i = 0; i < 3; ++i)
-// 		{
-// 		std::cout << animals[i]->getType() << " says: ";
-// 		animals[i]->makeSound();
-// 	}
-//
-// 	for (int i = 0; i < 3; ++i)
-// 		delete animals[i];
-//
-// 	// std::cout << "\n--- Incorect Polymorphism (Missing virtual) ---\n" << std::endl;
-// 	// const WrongAnimal *wrongCat = new WrongCat();
-// 	//
-// 	// std::cout << "\nCalling makeSound():\n";
-// 	// std::cout << "WrongCat as WrongAnimal says: ";
-// 	// wrongCat->makeSound();
-//
-// 	// delete wrongCat; //Undefined behavior if ~WrongAnimal is not virtual
-//
-// 	return 0;
+// 	const Dog *dog = new Dog();
+// 	dog->setIdea(0, "Roar for no reason");
+// 	std::cout << "Dog idea 0: " << dog->getIdea(0) << std::endl;
+// 	delete dog;
+// 	return (0);
 // }

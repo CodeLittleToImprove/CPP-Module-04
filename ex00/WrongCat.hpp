@@ -5,11 +5,9 @@
 
 class WrongCat: public WrongAnimal
 {
-	protected:
-		std::string	_type;
+
 	public:
 		WrongCat();
-		WrongCat(std::string const &type);
 		WrongCat(const WrongCat &other);
 		WrongCat &operator=(const WrongCat &other);
 		~WrongCat();
