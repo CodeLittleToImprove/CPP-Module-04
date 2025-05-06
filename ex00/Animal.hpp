@@ -3,19 +3,18 @@
 
 # include <iostream>
 
-class Cat
+class Animal
 {
-
 	protected:
 		std::string	_type;
 	public:
-		Cat();
-		Cat(std::string const &type);
-		Cat(const Cat &other);
-		Cat &operator=(const Cat &other);
-		virtual ~Cat();
-		virtual void makeSound();
-		std::string getType() const;
+		Animal();
+		Animal(std::string const &type);
+		Animal(const Animal &other);
+		Animal &operator=(const Animal &other);
+		virtual ~Animal();
+		virtual void makeSound() const;
+		virtual std::string getType() const;
 		virtual std::string getClassName() const;
 };
 #endif

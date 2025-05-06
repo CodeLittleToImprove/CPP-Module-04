@@ -1,29 +1,29 @@
 
-#include "Cat.hpp"
+#include "Dog.hpp"
 
 // Default constructor
-Cat::Cat()
-:_type("Cat")
+Dog::Dog()
+	:_type("Dog")
 {
 	std::cout << getClassName() << " Default constructor called" << std::endl;
 }
 
 // Parameterized Constructor
-Cat::Cat(std::string const &type)
+Dog::Dog(std::string const &type)
 	:_type(type)
 {
 	std::cout << getClassName() << " Parameterized Constructor called" << std::endl;
 }
 
 // Copy constructor
-Cat::Cat(const Cat &other)
+Dog::Dog(const Dog &other)
 	:Animal(other)
 {
 	std::cout << getClassName() << " Copy constructor called" << std::endl;
 }
 
 // Copy Assignment operator overload
-Cat &Cat::operator=(const Cat &other)
+Dog &Dog::operator=(const Dog &other)
 {
 	std::cout << getClassName() << " Copy assignment operator called" << std::endl;
 	if (this != &other)
@@ -32,23 +32,23 @@ Cat &Cat::operator=(const Cat &other)
 }
 
 // Destructor
-Cat::~Cat(void)
+Dog::~Dog(void)
 {
 	std::cout << getClassName() << " Destructor called" << std::endl;
 }
 
-void Cat::makeSound() const
+void Dog::makeSound()  const
 {
-	std::cout <<"Angry " << this->_type << " Noises MEOW" << std::endl;
+	std::cout <<"Angry " << this->_type << " Noises WOOF" << std::endl;
 }
 
-std::string Cat::getType() const
+std::string Dog::getType() const
 {
 	return this->_type;
 }
 
-std::string Cat::getClassName() const
+std::string Dog::getClassName() const
 {
-	return "Cat";
+	return "Dog";
 }
 

@@ -3,7 +3,7 @@
 
 # include "Animal.hpp"
 
-class Cat: public Cat
+class Cat: public Animal
 {
 	protected:
 		std::string	_type;
@@ -12,9 +12,9 @@ class Cat: public Cat
 		Cat(std::string const &type);
 		Cat(const Cat &other);
 		Cat &operator=(const Cat &other);
-		virtual ~Cat();
-		virtual void makeSound();
+		~Cat();
+		void makeSound() const;
 		std::string getType() const;
-		virtual std::string getClassName() const;
+		std::string getClassName() const;
 };
 #endif
