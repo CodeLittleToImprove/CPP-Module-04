@@ -11,33 +11,21 @@
 /* ************************************************************************** */
 
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
 #include "Brain.hpp"
 
+
 int main()
 {
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	// const Animal *Animal2 = new Animal;
-	// Animal2->makeSound();
-	delete j;//should not create a leak
-	delete i;
+	const AAnimal *dog = new Dog;
+	const AAnimal *cat = new Cat;
+	// const AAnimal *Animal = new AAnimal; // not working because of compiler error
 
-	return 0;
+	dog->makeSound();
+	cat->makeSound();
+
+	delete dog;
+	delete cat;
 }
-
-// int main()
-// {
-// 	const Cat *cat = new Cat();
-// 	cat->setIdea(0, "Attack feet at 3 AM");
-// 	std::cout << "Cat idea 0: " << cat->getIdea(0) << std::endl;
-// 	delete cat;
-//
-// 	const Dog *dog = new Dog();
-// 	dog->setIdea(0, "Roar for no reason");
-// 	std::cout << "Dog idea 0: " << dog->getIdea(0) << std::endl;
-// 	delete dog;
-// 	return (0);
-// }

@@ -18,3 +18,10 @@ add_executable(cpp04_ex01
         ex01/Cat.cpp
         ex01/Dog.cpp
         ex01/main.cpp)
+
+add_executable(cpp04_ex02
+        ex02/AAnimal.cpp
+        ex02/Brain.cpp
+        ex02/Cat.cpp
+        ex02/Dog.cpp
+        ex02/main.cpp)
